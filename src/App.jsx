@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import ProductManager from "./components/ProductManager";
 import UserProfile from "./components/UserProfile";
 import Categories from "./components/Categories"
+import Posts from "./components/Posts";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Home = () => {
       <button onClick={() => navigate("/products")}>Products</button>
       <button onClick={() => navigate("/counter")}>Counter</button>
       <button onClick={() => navigate("/categories")}>categories</button>
+      <button onClick={() => navigate("/post")}>Post</button>
     </main>
   );
 };
@@ -38,6 +40,15 @@ const App = () => (
         element={
           <RoutePage>
             <UserProfile />
+          </RoutePage>
+        }
+      />
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/post"
+        element={
+          <RoutePage>
+            <Posts/>
           </RoutePage>
         }
       />

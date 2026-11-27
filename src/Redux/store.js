@@ -4,6 +4,7 @@ import userReducer from "./userSlice"
 import productReducer from "./productSlice"
 import apiProductReducer from "./apiProductSlice"
 import categoryReducer from "./categorySlice"
+import postReducer from "./postSlice"
 
 
 
@@ -14,9 +15,8 @@ const store = configureStore(
             user:userReducer,
             product:productReducer,
             apiProduct:apiProductReducer,
-            category: categoryReducer
-            
-
+            category: categoryReducer,
+            post:postReducer
         }
     }
 )
